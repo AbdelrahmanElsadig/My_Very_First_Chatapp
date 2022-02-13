@@ -1,7 +1,7 @@
 import {
     io
 } from 'socket.io-client'
-const socket = io('http://127.0.0.1:5000')
+const socket = io('https://flask-chatapp1.herokuapp.com/')
 socket.on('receive-message', (data) => {
     sender(data['msg'], data['user'])
 })
@@ -74,7 +74,7 @@ window.send_message = function send_message() {
             if ('username' in txt) {
                 name = txt['username'];
                 m = txt['message']
-                const temp_socket = io('http://127.0.0.1:5000')
+                const temp_socket = io('https://flask-chatapp1.herokuapp.com/')
                 temp_socket.on('connect', () => {
                     temp_socket.emit('send_message', {
                         'message': m,
