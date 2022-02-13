@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%} Login {%endblock%}
+{%block head%} <link rel="stylesheet" href="../static/styles/forms.css">{%endblock%}
+{%block content%}
+
+<div class="card">
+    <h1>Login</h1>
+    <form action='/chat_room' onsubmit='return login_to_chat()' class='login-form' method='post'>
+        <input class='login' type="text" name="username" id="" placeholder='Username'>
+        <input class='login' type="text" name="password" id="" placeholder='Password'>
+        <input class='login' type="text" name="email" id="" placeholder='Email'>
+        <input class='login-btn' type="submit" name="login" id="">
+    </form>
+</div>
+
+{%endblock%}

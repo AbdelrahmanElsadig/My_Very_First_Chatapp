@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block head%}
+<link rel="stylesheet" href="../static/styles/chat.css">
+{%endblock%}
+{%block title%} Chat Room {%endblock%}
+{%block content%}
+<div class="chat-box">
+    <div class="box-header">
+        <img src="../static/images/comment.svg" alt="">
+        <p>Chat Box</p>
+    </div>
+    <div class="box-content">
+        <div class="message left">
+            <img src="../static/images/comment.svg" alt="">
+            <div class="text">
+                <h3 class="username">Admin</h3>
+                <p>Hello and Welcome to the Chat Room</p>
+            </div>
+        </div>
+    </div>
+    <form action='' class='message-form' onsubmit='return send_message()' method='post'>
+        <input class='enter' placeholder='Enter Message Here' type="text" name='enter'>
+        <input type="submit" class='submit' name='submit' id='submit'>
+    </form>
+</div>
+
+
+
+{%endblock%}

@@ -1,0 +1,5 @@
+mysql_host: 'localhost'
+mysql_user: 'root'
+mysql_password: '!AweSomeNess150'
+mysql_db: 'chatapp_flask'
+mysql_cursorclass: 'DictCursor'
