@@ -1,10 +1,10 @@
-from wsgi import app
-from flask import redirect, render_template, url_for,request
+from flask import Flask,redirect, render_template, url_for,request
 from database import db
 from api import api,session
 from flask_socketio import SocketIO,send,emit
-
-
+app = Flask(__name__)
+app.secret_key = 'whatever'
+api.init_app(app)
 socketio = SocketIO(app,cors_allowed_origins="*")
 
 @socketio.on('send_message')
