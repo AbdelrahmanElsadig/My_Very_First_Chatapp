@@ -112,7 +112,6 @@ window.login_to_chat = function login_to_chat() {
                     data.appendChild(h3)
                 }
             } else {
-                user = txt['user'];
                 window.location.href = '/chat_room';
             }
         })
@@ -142,7 +141,8 @@ window.register = function register() {
                     data.appendChild(h3)
                 }
 
-            } else {
+            } 
+            else {
                 window.location.href = '/chat_room'
             }
         })
