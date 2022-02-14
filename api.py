@@ -1,4 +1,4 @@
-from app import app
+from wsgi import app
 from database import db
 from flask_restful import Api,Resource,request
 from flask import session

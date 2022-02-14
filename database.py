@@ -1,5 +1,5 @@
 from pickle import FALSE
-from app import app
+from wsgi import app
 import mysql.connector
 db = mysql.connector.connect(host = 'bjsqk1ojkibcchfv9y3h-mysql.services.clever-cloud.com',
                              user = 'u2bdsf11zbwizsfx', 
