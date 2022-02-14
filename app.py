@@ -2,6 +2,7 @@ from flask import Flask,redirect, render_template, url_for,request
 from database import db
 from api import api,session
 from flask_socketio import SocketIO,send,emit
+import os
 app = Flask(__name__)
 app.secret_key = 'whatever'
 api.init_app(app)
@@ -51,4 +52,4 @@ def logout():
 
 
 if __name__ == '__main__':
-    socketio.run(app,debug=True)
+    socketio.run(app,debug=True,port=int(os.environ.get('PORT', '5000')))
